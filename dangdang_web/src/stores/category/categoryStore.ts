@@ -8,7 +8,6 @@ export const useCategoryStore = defineStore('categoryStore', {
   actions: {
     queryFirstCategory() {
       CateApi.findFirstCategory().then((res) => {
-        console.log('res :>> ', res)
         this.firstCategory = res.data
       })
     }

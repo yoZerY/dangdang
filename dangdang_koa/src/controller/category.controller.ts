@@ -11,7 +11,6 @@ class CategoryController {
   @Get('/findSecAndThird/:firstctgyId')
   async findSecAndThird(ctx: Context) {
     const { firstctgyId } = ctx.params
-
     const res = await findSecThirdCategory(firstctgyId)
     ctx.body = ResResult.success(res)
   }
@@ -19,7 +18,6 @@ class CategoryController {
   @Get('/findFirstCategory')
   async findFirstCategory(ctx: Context) {
     const res = await findFirstCategory()
-    console.log(res)
     ctx.body = ResResult.success(res)
   }
 }
